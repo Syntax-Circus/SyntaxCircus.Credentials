@@ -66,7 +66,7 @@ public sealed class EncryptedFileCredentialStore(string filePath) : ICredentialS
             var decrypted = Decrypt(encrypted);
             return JsonSerializer.Deserialize<Dictionary<string, string>>(decrypted) ?? [];
         }
-        catch (Exception ex) when (ex is CryptographicException or JsonException or IOException)
+        catch (Exception ex) when (ex is CryptographicException or JsonException or IOException or ArgumentOutOfRangeException)
         {
             // Corrupt, foreign-key-encrypted, or unreadable file — treat as empty rather than fail.
             return [];

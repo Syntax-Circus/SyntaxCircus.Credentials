@@ -1,6 +1,7 @@
 # SyntaxCircus.Credentials
 
 [![Build](https://github.com/Syntax-Circus/SyntaxCircus.Credentials/actions/workflows/build.yml/badge.svg)](https://github.com/Syntax-Circus/SyntaxCircus.Credentials/actions/workflows/build.yml)
+[![NuGet](https://img.shields.io/nuget/v/SyntaxCircus.Credentials.svg)](https://www.nuget.org/packages/SyntaxCircus.Credentials)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.txt)
 
 A cross-platform desktop credential vault: Windows Credential Manager, macOS Keychain, Linux `secret-tool`/libsecret (with an AES-256 encrypted-file fallback when libsecret isn't available), and a factory that picks the right one for the current OS.
